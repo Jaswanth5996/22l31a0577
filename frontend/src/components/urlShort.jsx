@@ -16,6 +16,8 @@ const Url = () => {
             const response = await axios.post("http://localhost:3000/shorturls", { url,expiry,code });
             setShorturl(response.data.short);
             setCopy(false);
+            const existingUrls = JSON.parse(localStorage.getItem("urls")) || [];
+            localStorage.setItem("urls", JSON.stringify([...existingUrls, response.data.short]));
         }catch(err){
             console.error("Server Error", err);
         }
