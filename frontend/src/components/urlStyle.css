@@ -1,5 +1,6 @@
-*{
-    background-color: rgb(36, 91, 164);
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -48,6 +49,16 @@ form{
 
 .resulturl{
     font-size:larger;
+    color: yellow;
+}
+
+.display{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px
 }
 
 .copy{
@@ -58,4 +69,52 @@ form{
     color:white;
     border: 1px;
     font-size:medium
+}
+
+@media (max-width: 768px) {
+  .urlinput,
+  .button {
+    width: 100%;
+    font-size: medium;
+    padding: 15px;
+  }
+
+  .legend {
+    font-size: x-large;
+    text-align: center;
+  }
+
+  .copy {
+    width: 80px;
+    padding: 8px;
+    font-size: small;
+  }
+
+  .resulturl {
+    font-size: medium;
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 480px) {
+  .urlinput,
+  .button {
+    width: 100%;
+    font-size: small;
+    padding: 12px;
+  }
+
+  .legend {
+    font-size: large;
+  }
+
+  .copy {
+    width: 70px;
+    padding: 6px;
+    font-size: small;
+  }
+
+  .display {
+    gap: 10px;
+  }
 }
